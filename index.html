@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> Chai Wala App </title>
+		<style>
+			* { font-size:40px; font-family: Simsun; }
+			body { background-color:#C47F2B; } 
+		</style>
+		<link rel="icon"  href="tea1.ico" >
+		<script>
+			function order()
+			{
+				event.preventDefault();
+				let name = document.getElementById("name");
+				let adrak = document.getElementById("adrak");
+				let elaichi = document.getElementById("elaichi");
+				let masala = document.getElementById("masala");
+				let choice = "";
+				if (adrak.checked)			choice = "Adrak";
+				else if (elaichi.checked)		choice = "Elaichi";
+				else							choice = "Masala";
+				alert(name.value + " " + choice);
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+			<h1> Chai Walla App </h1>
+			<form onsubmit="order()">
+				<input type="text" placeholder="enter ur name " id="name"/>
+				<br/><br/>
+				<input type="radio" name="c" value="adrak" id="adrak" checked=true/> Adrak 
+				<input type="radio" name="c" value="elaichi" id="elaichi" /> Elaichi 
+				<input type="radio" name="c" value="masala" id="masala" /> Masala 
+				<br/><br/>
+				<input type="submit" value="Order" />
+			</form>
+		</center>
+	</body>
+</html>
+
+
+
